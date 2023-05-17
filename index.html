@@ -8,12 +8,33 @@
   <meta name="description" content="Time tracking dashboard with dinamic data">
   <meta name="keywords" content="time, tracking, dashboard">
   <meta name="author" content="Cristian Camilo Rodriguez">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-  Report for
-  Jeremy Robson
-  <script src="js/main.js"></script>
+  <main class="content">
+    <section class="user">
+      <div class="user__info">
+        <figure class="info__avatar">
+          <img src="images/image-jeremy.png" alt="" class="avatar">
+        </figure>
+        <div class="info__data">
+          <p class="data__report">Report For</p>
+          <p class="data__name">Jeremy Robson</p>
+        </div>
+      </div>
+      <div class="user__options">
+        <ul class="options">
+          <li class="options__item active" id="dayli">Daily</li>
+          <li class="options__item" id="weekly">Weekly</li>
+          <li class="options__item" id="monthly">Monthly</li>
+        </ul>
+      </div>
+    </section>
+    <section class="cards">
+    
+    </section>
+  </main>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
