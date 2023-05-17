@@ -44,7 +44,7 @@ function drawCards(array){
   array.forEach((element, index) =>{
     cards.innerHTML += `
     <div class="card" style="background-color: ${bgColors[index]};">
-    <img src="images/icon-${data[index].title}.svg" alt="" class="card__bg">
+    <img src="../images/icon-${data[index].title}.svg" alt="" class="card__bg">
       <div class="card__info">
         <header class="info__header">
           <p class="header__title">${data[index].title}</p>
