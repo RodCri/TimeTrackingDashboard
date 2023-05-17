@@ -1,3 +1,4 @@
+@use 'variables' as v;
 *{
   padding: 0;
   margin: 0;
@@ -7,5 +8,202 @@ html{
   font-size: 62.5%;
 }
 body{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: v.$very-dark-blue;
+  color: v.$text;
+  @media(min-width:920px){
+    height: 100vh;
+    display: grid;
+    align-content: center;
+  }
+}
+.content{
+  width: 90%;
+  max-width: 1110px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  @media(min-width:920px){
+    flex-direction: row;
+    height: 520px;
+  }
+  .user{
+    width: 100%;
+    height: 200px;
+    background-color: v.$dark-blue;
+    border-radius: 10px;
+    @media(min-width:920px){
+      width: 260px;
+      height: 100%;
+    }
+    &__info{
+      height: 130px;
+      background-color: v.$blue;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      @media(min-width:920px){
+        height: 350px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+      }
+      .info__avatar{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid v.$text;
+        @media(min-width:920px){
+          width: 84px;
+          height: 84px;
+          margin-bottom: 20px;
+        }
+        .avatar{
+          width: 100%;
+        }
+      }
+      .info__data{
+        max-width: 180px;
+        .data__report{
+          font-size: 1.4rem;
+          color: v.$pale-blue;
+          margin-bottom: 10px;
+        }
+        .data__name{
+          font-size: 2.2rem;
+          color: v.$text;
+          @media(min-width:920px){
+            font-size: 3rem;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+    &__options{
+      width: 100%;
+      padding: 26px 20px;
+      @media(min-width:920px){
+        padding: 30px;
+      }
+      .options{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        .options__item{
+          &:hover{
+            color: v.$pale-blue;
+          }
+        }
+        .active{
+          color:  v.$pale-blue;;
+        }
+        @media(min-width:920px){
+          flex-direction: column;
+          gap: 20px;
+          justify-content: flex-end;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 830px;
+    gap: 24px;
+    @media(min-width:920px){
+      flex-direction: row;
+    }
+    .card{
+      width: 100%;
+      height: 160px;
+      max-height: 250px;
+      position: relative;
+      border-radius: 10px;
+      @media(min-width:920px){
+        width: 255px;
+        height: 250px;
+      }
+      &__bg{
+        position: absolute;
+        right: 20px;
+      }
+      &__info{
+        width: 100%;
+        height: 120px;
+        background-color: v.$dark-blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 24px;
+        gap: 16px;
+        border-radius: 10px 10px 8px 8px;
+        cursor: pointer;
+        @media(min-width:920px){
+          height: 200px;
+          gap: 28px;
+        }
+        &:hover{
+          background-color: #34397b;
+        }
+        .info__header{
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          .header__title{
+            font-size: 1.6rem;
+            @media(min-width:920px){
+              font-size: 1.8rem;
+            }
+          }
+          .header__points{
+            display: flex;
+            gap: 4px;
+            cursor: pointer;
+            .point{
+              content: '';
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background-color: v.$pale-blue;
+            }
+          }
+        }
+        .info__data{
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          @media(min-width:920px){
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+          }
+          .data__current{
+            font-size: 2.4rem;
+            letter-spacing: 1.2px;
+            @media(min-width:920px){
+              font-size: 5rem;
+            }
+          }
+          .data__previous{
+            color: v.$pale-blue;
+            font-size: 1.4rem;
+            @media(min-width:920px){
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
