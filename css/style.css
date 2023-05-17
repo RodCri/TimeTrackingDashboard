@@ -237,5 +237,23 @@ body {
     font-size: 1.6rem;
   }
 }
+.content .cards #Work {
+  background: url("../images/icon-work.svg") no-repeat top right;
+}
+.content .cards #Play {
+  background: url("../images/icon-play.svg") no-repeat top right;
+}
+.content .cards #Study {
+  background: url("../images/icon-study.svg") no-repeat top right;
+}
+.content .cards #Exercise {
+  background: url("../images/icon-exercise.svg") no-repeat top right;
+}
+.content .cards #Social {
+  background: url("../images/icon-social.svg") no-repeat top right;
+}
+.content .cards #Self-Care {
+  background: url("../images/icon-self-care.svg") no-repeat top right;
+}
 
 /*# sourceMappingURL=style.css.map */
